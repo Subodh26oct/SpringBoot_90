@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringbokPlacementApplication implements CommandLineRunner {
 
 	@Autowired
-	Apple obj;
+	DBservice dBservice;
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbokPlacementApplication.class, args);
@@ -19,6 +19,8 @@ public class SpringbokPlacementApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		obj.eatApple();
+		System.out.println(dBservice.getData());
+
+//		obj.eatApple();
 	}
 }
